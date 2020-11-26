@@ -1,0 +1,524 @@
+/*----------------------------------------------
+
+共通CSS
+
+
+----------------------------*/
+body{
+    font-family:"TBゴシック M","TBゴシックDB Std";
+    margin:0 auto;
+    display: block;
+    font-weight: bold;
+    width:950px
+}
+h3{
+    font-family: "TBゴシックDB Std";
+}
+
+/*----------------------------------------------
+
+トップぺージ
+
+----------------------------*/
+.header{
+    align-items: center;
+    position: relative ;
+    margin:0 auto;
+}
+.header-menu{
+    position: absolute;
+    top:5%;
+    left: 77%;
+}
+.header-icon{
+    padding-left: 14.09px;
+}
+.top-mob-img{
+    display: none;
+}
+/*----------------------------------------------
+
+トップぺージレスポンシブ
+
+----------------------------*/
+
+@media screen and (max-width: 375px){
+    body{
+        width: 375px;
+        margin:auto 0;
+    }
+    .container{
+        padding:0;
+        width: 375px;
+        margin:auto 0;
+        margin-right: 0;
+    }
+    .header{
+        margin-right:0;
+    }
+    .pc-top-img{
+        display: none;
+    }
+    
+    .header-menu{
+    top:105%;
+    left: 20%;
+}
+    .top-mob-img{
+    display: block;
+    max-width: 100%;
+    margin: 0;
+}
+    }
+
+/*----------------------------------------------
+
+店内紹介
+
+----------------------------*/
+.inside-store{
+    margin:45px 51px 30px;
+    overflow: hidden;
+}
+.inside-store-img{
+    width: 263px;
+    height: 220px;
+}
+.cafe-icon{
+    margin: 50px 0 12px;
+}
+.store-box{
+    text-align: center;
+    width: 950px;
+}
+.store-heading{
+    font-size: 27px;
+    margin-bottom: 40px;
+}
+.mb-store-heading{
+    font-size: 21px;
+    margin-bottom: 40px;
+    display: none;
+}
+.store-introduction{
+    font-size: 14px;
+    margin-bottom: 80px;
+}
+.mb-store-introduction{
+    font-size: 14px;
+    margin-bottom: 80px;
+    display:none ;
+}
+.inside-store-title{
+    font-size: 14px;
+    background-color: yellow;
+    padding: 8px ;
+    width:314px;
+    height: 30px;
+    display: none;
+    text-align: center;
+}
+.store-icon-box{
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
+    text-align: center;
+}
+.pet-icon{
+    margin: 30px 0;
+    width: 145.53px;
+    height: 114.65px;
+}
+.wifi-icon{
+    margin: 30px 0;
+    width: 139.4px;
+    height: 114.92px;
+}
+.matani-icon{
+    margin: 18px 0;
+    width: 150.59px;
+    height: 122.69px;
+}
+.store-map-box{
+    padding: 70px 0;
+    border-bottom: 1px dashed black;
+}
+.map-icon{
+    margin-right: 30.5px;
+    width: 408px;
+    height: 357px;
+}
+.store-btn-box{
+    height: 250px;
+}
+.btn-gogle-icon{
+    width: 263px;
+    height: 30px;
+    margin-bottom: 15px;
+}
+.btn-tel-icon{
+    width: 263px;
+    height: 30px;
+    margin-bottom: 15px;
+}
+.btn-uber-icon{
+    width: 263px;
+    height: 30px;
+    margin-bottom: 15px;
+}
+.btn-youtuber-icon{
+    width: 263px;
+    height: 84px;
+    margin-bottom: 25px;
+}
+.mb-btn-youtuber-icon{
+    width: 263px;
+    height: 84px;
+    margin-bottom: 25px;
+    display: none;
+}
+.store-text{
+    font-size: 14px;
+    text-align: left;
+    font-family: "TBゴシックDB Std","Normal";
+    line-height: 1.7;
+    line-height: 1.5;
+}
+.mob-store-img{
+    display:none;
+}
+/*----------------------------------------------
+
+店内紹介　レスポンシブ
+
+----------------------------*/
+
+@media screen and (max-width: 375px){
+    .row{
+        width:314px;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    .col-md-4{
+        padding:0;
+    }
+    .inside-store{
+        margin:120px 30px 50px 30px;
+        overflow: hidden;
+    }
+    .inside-store-img{
+        width:314px;
+    }
+    .store-box{
+        text-align: left;
+        width: 375px;
+    }
+    .store-heading{
+        font-size: 21px;
+        margin-bottom: 40px;
+        padding:0;
+    }
+    .cafe-icon{
+        float:left;
+        margin-top:30px ;
+    }
+    .store-img-box{
+        display: flex;
+        justify-content: center;
+
+    }
+    .store-heading{
+        margin-top:50px;
+        padding:10px;
+    }
+    .store-introduction{
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    
+    .store-map-box{
+        padding-top:20px;
+        padding-bottom: 0;
+        border-bottom: 1px dashed black;
+}
+.store-btn-box{
+    text-align: center;
+}
+    .map-icon{
+        width:314px;
+        height:276px;
+        margin-bottom: 20px;
+    }
+    .btn-gogle-icon{
+        width:314px;
+    }
+    .btn-tel-icon{
+        width:314px;
+    }
+    .btn-uber-icon{
+        width:314px;
+    }
+    .col-md-7{
+        padding:0;
+    }
+    .mob-store-img{
+        display:block;
+        margin: 10px 0;
+        padding: 10px 0 ;
+        width: 314px;
+    }
+    
+    .store-heading{
+        display: none;
+    }
+    .mb-store-heading{
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+        font-weight: bolder;
+        letter-spacing: 1.5px;
+        text-align: left;
+    }
+    .store-introduction{
+        display:none ;
+    }
+    .col-md-5{
+        padding:0;
+    }
+    .mb-store-introduction{
+        display:block ;
+        margin-bottom: px;
+    }
+    .btn-youtuber-icon{
+        display: none;
+    }
+    .mb-btn-youtuber-icon{
+        margin: 20px 25px;
+        display: flex;
+        justify-content: center;
+    }
+    .inside-store-title{
+        font-size: 14px;
+        background-color: yellow;
+        padding: 8px ;
+        width:314px;
+        height: 30px;
+        display: block;
+        margin-bottom: 0;
+    }
+    }
+/*----------------------------------------------
+
+メニュー紹介
+
+----------------------------*/
+.menu{
+    text-align: center;
+}
+.menu-img-box{
+    margin: 80px 0;
+    position: relative;
+}
+.menu-icon{
+    position: absolute;
+    width: 124px;
+    height: 70px;
+    top: -8%;
+    left: 43%;
+}
+.menu-header{
+    margin: 0 auto;
+    width: 700px;
+    height: 554px;
+    text-align: center;
+}
+.mb-menu-header{
+    margin: 0 auto;
+    display: none;
+    text-align: center;
+}
+.menu-flex{
+    display: flex;
+    justify-content: center;
+}
+.cooking-logo{
+    width: 335px;
+    height: 35px;
+}
+.cooking-img{
+    width: 335px;
+    height: 200px;
+}
+
+.menu-ul{
+    list-style-type:decimal;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+.menu-list{
+    font-size: 12px;
+    font-family: "TBゴシックDB Std";
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed rgb(201, 210, 214);
+    padding-bottom: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+}
+.menu-list-left p{
+    font-size: 10px;
+    text-align: left;
+    padding-left: 27px;
+    margin: 0;
+}
+.menu-list-left{
+    text-align: left;
+}
+.menu-list-right{
+    margin-right: 15px;
+}
+.menu-number{
+    padding-right: 15px;
+}
+.menu-option{
+    font-size: 11px;
+    text-align: left;
+    margin: 10px 12px 25px;
+}
+.contact-icon{
+    width:350px;
+    height: 30px;
+}
+/*----------------------------------------------
+
+メニュー紹介レスポンシブ
+
+----------------------------*/
+@media screen and (max-width: 375px){
+.menu-header{
+    display: none;
+}
+.mb-menu-header{
+    display: block;
+    width: 374px;
+    margin:0;
+}
+
+.menu-flex{
+    margin:0 20px;
+}
+.menu-icon{
+    left: 32%;
+}
+.menu-img-box{
+    margin: 50px 0 20px 0;
+}
+.menu-ul{
+    padding:0;
+}
+    .menu-list{
+        margin-right:0px;
+    }
+    .menu-list-right{
+        margin-right: 0;
+    }
+    .drink-box{
+        margin-left:0px;
+        }
+        .contact-icon{
+            width:314px;
+            height: 30px;
+        }
+}
+/*----------------------------------------------
+
+ドリンク紹介
+
+----------------------------*/
+.drink-logo{
+    margin-top: 40px;
+}
+.alcohol-logo{
+    width:189px;
+    height:32px;
+    margin-top: 40px;
+}
+.tea-logo{
+    width:32px;
+    height:31px;
+    margin-top: 40px;
+}
+.juice-logo{
+    width:91.96px;
+    height:30.75px;
+    margin-top: 40px;
+}
+.nonal-logo{
+    width:194px;
+    height:31px;
+    margin-top: 40px;
+}
+.beer-logo{
+    width:43px;
+    height:31px;
+    margin-top: 40px;
+}
+.drink-box{
+    text-align: left;
+    margin-left: 20px;
+}
+
+.drink-list{
+    font-size: 10px;
+    margin: 0;
+    padding-left: 0;
+    text-align: left;
+}
+.drink-list-left{
+    text-align: left;
+}
+
+.drink-option{
+    font-size: 12px;
+    text-align: left;
+    margin: 10px 0px 25px;
+}
+.tea-img{
+    margin-top: 40px;
+    height: 550px;
+}
+
+/*----------------------------------------------
+
+footer
+
+----------------------------*/
+.footer{
+    font-size: 9px;
+    text-align: center;
+    padding: 29px ;
+    background-color: yellow;
+    font-family: "TBゴシックSL Std";
+    font-weight: normal;
+}
+
+/*----------------------------------------------
+
+footer
+
+----------------------------*/
+@media screen and (max-width: 375px){
+
+    .footer{
+        width:375px;
+    }
+    
+    .mob-none-img{
+        display: none;
+    }
+    
+    .drink-box{
+        margin-left:0px;
+        }
+}

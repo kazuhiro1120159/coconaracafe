@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INAZUMA CAFE</title>
+    <!-- BootstrapのCSS読み込み -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- CSSの読み込み-->
+    <link rel="stylesheet" href="index.css">
+    <!--アニメーション-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script>
+    $(window).on('load',function(){
+    // テキストを<span></span>で囲む
+    $('.typing').children().andSelf().contents().each(function() {
+    if (this.nodeType == 3) {
+    $(this).replaceWith($(this).text().replace(/(\S)/g, '<span>$1</span>'));
+    }
+    });
+/*work　hover*/
+$(function(){
+        $(".content-p").hover(
+            function() {
+                $(this).css("opacity", "0");
+            },
+            function() {
+                $(this).css("opacity", "1");
+            }
+        );
+    });
+$(function(){
+        $(".andmore-p").hover(
+            function() {
+                $(this).css("opacity", "0.5");
+            },
+            function() {
+                $(this).css("opacity", "1");
+            }
+        );
+    });
+    /*全体*/
+    $(function () {
+    $(window).scroll(function () {
+        const wHeight = $(window).height();
+        const scrollAmount = $(window).scrollTop();
+        $('.scrollanime').each(function () {
+            const targetPosition = $(this).offset().top;
+            if(scrollAmount > targetPosition - wHeight + 60) {
+                $(this).addClass("fadeInDown");
+            }
+        });
+    });
+});
+</script>
+<!--Font-->
+    <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?5fbb94164d7845599a153637e90393a3" charset="utf-8"></script>
+</head>
+<body style="height: 100%;">
+    <!--トップページ-->
+        <header class="header">
+            <div class="header-menu">
+                <a href="">
+                    <img class="header-icon" src="mob/takeout.png" alt="テイクアウト">
+                </a>
+                <a href="">
+                    <img class="header-icon" src="mob/uber.png" alt="ウーバーイーツ">
+                </a>
+            </div>
+            <img class="pc-top-img" src="pc/pc_top.png" alt="トップ画像">
+            <img class="top-mob-img" src="mob/top_mob1.png" alt="トップ画像">
+        </header>
+    <!--メインページ-->
+    <main>
+        <section class="inside-store">
+            <div class="row store-img-box">
+            <!--店内の紹介  写真-->
+                <div class="col-md-4 col-xs-12" >
+                    <p class="inside-store-title">About INAZUMA CAFE</p>
+                    <img class="inside-store-img" src="mob/inside-store01.png" alt="店内内装">
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <img class="inside-store-img mob-none-img" src="mob/inside-store02.png" alt="店内内装">
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <img class="inside-store-img mob-none-img" src="mob/inside-store03.png" alt="店内内装">
+                </div>
+            </div>
+            <!--店内の紹介  文章-->
+            
+            <div class="row">
+                <div class="store-box">
+                    <div class="col-md-12 cafe-size">
+                        <img class="cafe-icon" src="mob/cafe.png" alt="店内内装">
+                    </div>
+                    <div class="col-md-12 col-xs-8">
+                        <h3 class="store-heading">INAZUMA CAFEは<br>荻窪・教会通りにある<br>洋食屋です</h3>
+                        <h3 class="mb-store-heading">INAZUMA CAFEは荻窪・教会通りにある洋食屋です</h3>
+                    </div>
+                    <div class="col-md-12">
+                        <p class="store-introduction">テイクアウトやデリバリーはもちろんですが、<br>壁一面に描かれた漫画、おいしい料理やドリンクを楽しみにぜひご来店ください。<br>平日限定！日替わりイナズマランチは11時から15時です。<br>万全の感染症対策で、みなさまのご来店をお待ちしております。</p>
+                        <p class="mb-store-introduction">テイクアウトやデリバリーはもちろんですが、壁一面に描かれた漫画、おいしい料理やドリンクを楽しみにぜひご来店ください。平日限定！日替わりイナズマランチは11時から15時です。万全の感染症対策で、みなさまのご来店をお待ちしております。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row store-img-box">
+                <div class="col-md-4 col-xs-12" style="border-top: 1px dashed black;">
+                    <img  class="inside-store-img mob-store-img" src="mob/inside-store02.png" alt="店内内装">
+                </div>
+            </div>
+                <div class="store-icon-box row">
+                    <div class="col-md-4 pet-box">
+                        <img class="pet-icon" src="mob/pet.png" alt="ペット可">
+                    </div>
+                    <div class="col-md-4 wifi-box">
+                        <img class="wifi-icon" src="mob/wifi.png" alt="Wifi完備">
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <img class="matani-icon" src="mob/matani.png" alt="妊婦さん割引">
+                    </div>
+                </div>
+                <div class="store-map-box row">
+                    <div class="col-md-7 col-xs-6">
+                        <img class="map-icon" src="mob/map.png" alt="地図">
+                    </div>
+                    <div class="store-btn-box col-md-5 col-xs-12">
+                        <a href="">
+                            <img class="btn-gogle-icon" src="mob/btn-googlemap.png" alt="地図">
+                        </a>
+                        <a href="">
+                            <img class="btn-tel-icon" src="mob/btn-tel.png" alt="電話">
+                        </a>
+                        <a href="">
+                            <img class="btn-uber-icon" src="mob/btn-uber.png" alt="ウーバーイーツ">
+                        </a>
+                        <a href="">
+                            <img class="btn-youtuber-icon" src="mob/btn-youtube.png" alt="ユーチューブ">
+                        </a>
+                        <p class="store-text">
+                            〒167-0032<br>東京都杉並区天沼3-27-10<br>TEL:03-3220-1720<br>［営業時間］10：00〜22：00<br>［店休日］年末年始など
+                        </p>
+                    </div>
+                </div>
+            <div class="row store-img-box" style="border-bottom: 1px dashed black;">
+                <div class="col-md-4 col-xs-12">
+                    <a href="">
+                            <img class="mb-btn-youtuber-icon" src="mob/btn-youtube.png" alt="ユーチューブ">
+                        </a>
+                    <img class="inside-store-img mob-store-img" src="mob/inside-store03.png" alt="店内内装">
+                </div>
+            </div>
+        </section>
+        <section class="menu">
+            <div class="menu-img-box">
+                <img class="menu-icon" src="mob/menu-icon.png" alt="メニューアイコン">
+                <img class="menu-header" src="mob/menu-header.png" alt="メニューヘッダー">
+                <img class="mb-menu-header" src="mob/img005.png" alt="メニューヘッダー">
+
+            </div>
+            <div class="row menu-flex">
+                <div class="col-md-5 col-xs-12">
+                    <img class="cooking-logo" src="mob/bg_ricedish.png" alt="ライスディッシュのロゴ">
+                    <img class="cooking-img" src="mob/ricedish.png" alt="ライスディッシュ">
+                    <div class="menu-list-box">
+                        <ul class="menu-ul">
+                            <li class="menu-list">
+                                <div class="menu-list-left">
+                                    <span class="menu-number">1</span> あらびき手ごねハンバーグ［ライス付き］<br>
+                                    <p>
+                                        Grilled Hamburg Steake with rice
+                                    </p>
+                                </div>
+                                <div class="menu-list-right">
+                                    1,000
+                                </div>
+                            </li>
+                            <li class="menu-list">
+                                <div class="menu-list-left">
+                                    <span class="menu-number">2</span> あらびき手ごねハンバーグ［ライス付き］<br>
+                                    <p>
+                                        Grilled Hamburg Steake with rice
+                                    </p>
+                                </div>
+                                <div class="menu-list-right">
+                                    1,000
+                                </div>
+                            </li>
+                                <div class="menu-option">
+                                    ［選べるソース］<br> A.デミグラス B.和風 C.サルサ D.トマト E.ホワイトビネガー F.バジルソース <br>［トッピング（+100）］ チーズ／目玉焼き／アボカド
+                                </div>
+                            <li class="menu-list" style="text-align: left;">
+                                <div class="menu-list-left">
+                                    <span class="menu-number">3</span>稲妻オムカレー<br>
+                                    <p>
+                                        Omelette rice with Curry “INAZUMA”
+                                    </p>
+                                    <span style="margin:10px 0 0 25px;">［トッピング（+100）］ 野菜</span> 
+                                </div>
+                                <div class="menu-list-right">
+                                    1,000
+                                </div>
+                            </li>
+                            <li class="menu-list" style="text-align: left;">
+                                <div class="menu-list-left">
+                                    <span class="menu-number">4</span>自家製稲妻カレー<br>
+                                    <p>
+                                        Curry and rice “INAZUMA”
+                                    </p>
+                                </div>
+                                <div class="menu-list-right">
+                                    1,000
+                                </div>
+                            </li>
+                            <li class="menu-list" style="text-align: left;">
+                                <div class="menu-list-left">
+                                    <span class="menu-number">5</span>トロトロ玉子のオムライス<br>
+                                    <p>
+                                        Omelette rice with Demi-glace sauce
+                                    </p>
+                                </div>
+                                <div class="menu-list-right">
+                                    1,000
+                                </div>
+                            </li>
+                            <li class="menu-list" style="text-align: left;">
+                                <div class="menu-list-left">
+                                    <span class="menu-number">6</span>タコライス<br>
+                                    <p>
+                                        Taco filling and rice
+                                    </p>
+                                    <span style="margin:10px 0 0 25px;">［トッピング（+100）］ アボカド</span> 
+                                </div>
+                                <div class="menu-list-right">
+                                    1,000
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <img class="cooking-img" src="mob/ricedish02.png" style="margin-top: 30px; height: 325px;" alt="ライスディッシュ">
+                </div>
+                <div class="col-md-5 col-xs-12">
+                    <img class="cooking-logo" src="mob/bg_spaghetti.png" alt="パスタのロゴ">
+                    <img class="cooking-img" src="mob/spaghetti.png" alt="パスタ">
+                    <div class="menu-list-box">
+                        <ul class="menu-ul">
+                            <li class="menu-list">
+                                <div class="menu-list-left">
+                                    <span class="menu-number">7</span>魚介のトマトクリーム<br>
+                                    <p>
+                                        Tomato cream sauce spaghetti with Seafood
+                                    </p>
+                                </div>
+                                <div class="menu-list-right">
+                                    950
+                                </div>
+                            </li>
+                            <li class="menu-list">
+                                <div class="menu-list-left">
+                                    <span class="menu-number">8</span>ブロッコリーとベーコンのジェノベーゼクリーム<br>
+                                    <p>
+                                        Genovese cream sauce spaghetti with Bacon & BroccoliGrilled Hamburg Steake with rice
+                                    </p>
+                                </div>
+                                <div class="menu-list-right">
+                                    950
+                                </div>
+                            </li>
+                            <li class="menu-list" style="text-align: left;">
+                                <div class="menu-list-left">
+                                    <span class="menu-number">9</span>ふわふわ玉子のオムリタン<br>
+                                    <p>
+                                        Omelette on Neapolitan
+                                    </p>
+                                </div>
+                                <div class="menu-list-right">
+                                    950
+                                </div>
+                            </li>
+                            <li class="menu-list" style="text-align: left;">
+                                <div class="menu-list-left">
+                                    <span class="menu-number">10</span>たっぷりソースのカルボナーラ<br>
+                                    <p>
+                                        Carbonara with plenty of sauce
+                                    </p>
+                                </div>
+                                <div class="menu-list-right">
+                                    950
+                                </div>
+                            </li>
+                            <li class="menu-list" style="text-align: left;">
+                                <div class="menu-list-left">
+                                    <span class="menu-number">11</span>ブロッコリーとサーモンのクリームパスタ<br>
+                                    <p>
+                                        Cream sauce spaghetti with Salmon & Broccoli
+                                    </p>
+                                </div>
+                                <div class="menu-list-right">
+                                    950
+                                </div>
+                            </li>
+                            <li class="menu-list" style="text-align: left;">
+                                <div class="menu-list-left">
+                                    <span class="menu-number">12</span>ナスとベーコンのトマトソース<br>
+                                    <p>
+                                        Tomato sauce spaghetti with Bacon & Eggplant
+                                    </p>
+                                </div>
+                                <div class="menu-list-right">
+                                    900
+                                </div>
+                            </li>
+                            <li class="menu-list" style="text-align: left;">
+                                <div class="menu-list-left">
+                                    <span class="menu-number">13</span>季節野菜とベーコンの和風仕立て<br>
+                                    <p>
+                                        Japanese style spaghetti with Seasonal vegitables & Bacon
+                                    </p>
+                                </div>
+                                <div class="menu-list-right">
+                                    900
+                                </div>
+                            </li>
+                            <li class="menu-list" style="text-align: left;">
+                                <div class="menu-list-left">
+                                    <span class="menu-number">14</span>生ハムとチンゲンサイのペペロンチーノ<br>
+                                    <p>
+                                        Peperoncino with Prosciutto & Qing-geng-cai
+                                    </p>
+                                </div>
+                                <div class="menu-list-right">
+                                    900
+                                </div>
+                            </li>
+                            <li class="menu-list" style="text-align: left;">
+                                <div class="menu-list-left">
+                                    <span class="menu-number">15</span>梅とアボカドの青じそ仕立て<br>
+                                    <p>
+                                        Spaghetti with Ume & Avocado
+                                    </p>
+                                </div>
+                                <div class="menu-list-right">
+                                    900
+                                </div>
+                            </li>
+                            <li class="menu-list" style="text-align: left;">
+                                <div class="menu-list-left">
+                                    <span class="menu-number">16</span>喫茶店のナポリタン<br>
+                                    <p>
+                                        Neapolitan
+                                    </p>
+                                </div>
+                                <div class="menu-list-right">
+                                    900
+                                </div>
+                            </li>
+                            <div class="menu-option" style="font-size: 12px;">
+                                ※トーストを+150でお付けできます
+                            </div>
+                        </ul>
+                    </div>
+                    <img class="cooking-img" src="mob/spaghetti02.png" alt="ライスディッシュ">
+                </div>
+                <!--お問い合わせ-->
+                <div class="col-md-12" style="margin-top:80px; ">
+                    <a href="">
+                        <img class="contact-icon" src="mob/btn-tel.png" alt="電話">
+                    </a>
+                </div>
+                <div class="col-md-12" style="margin-top: 22px; margin-bottom: 80px;">
+                    <a href="">
+                        <img class="contact-icon" src="mob/btn-uber.png" alt="ウーバーイーツ">
+                    </a>
+                </div>
+                <!--サンドウィッチ-->
+                <div class="row menu-flex">
+                    <div class="col-md-5 col-xs-12">
+                        <img class="cooking-logo" src="mob/sandwich-logo.png" alt="サンドウィッチのロゴ">
+                        <img class="cooking-img" src="mob/sandwich.png" alt="サンドウィッチ">
+                        <div class="menu-list-box">
+                            <ul class="menu-ul">
+                                <li class="menu-list">
+                                    <div class="menu-list-left">
+                                        <span class="menu-number">17</span>生ハムシーザー・サンドウィッチ<br>
+                                        <p>
+                                            Prosciutto sandwich with Caesar sauce
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        700
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="menu-list-left">
+                                        <span class="menu-number">18</span> B.L.T（ベーコン・レタス・トマト）<br>
+                                        <p>
+                                            Bacon Lettuce and Tomato sandwich
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        700
+                                    </div>
+                                </li>
+                                <li class="menu-list" style="text-align: left;">
+                                    <div class="menu-list-left">
+                                        <span class="menu-number">19</span>スモークサーモンのタルタル・サンドウィッチ<br>
+                                        <p>
+                                            Smoked salmon sandwich with Tartar sauce
+                                        </p> 
+                                    </div>
+                                    <div class="menu-list-right">
+                                        700
+                                    </div>
+                                </li>
+                                <li class="menu-list" style="text-align: left;">
+                                    <div class="menu-list-left">
+                                        <span class="menu-number">20</span>ピザトースト<br>
+                                        <p>
+                                            Pizza toast
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        700
+                                    </div>
+                                </li>
+                                    <div class="menu-option" style="font-size: 12px;">
+                                        ※+100でアボカドトッピングできます
+                                    </div>
+                            </ul>
+                        </div>
+                    <img class="cooking-img" src="mob/sandwich02.png" style="width:334.5px height: 220px;" alt="サンドウィッチ">
+                    </div>
+                <!--デザート-->
+                    <div class="col-md-5 col-xs-12">
+                        <img class="cooking-logo" src="mob/dessert-logo.png" alt="デザートのロゴ">
+                        <img class="cooking-img" src="mob/dessert.png" alt="デザート">
+                        <div class="menu-list-box">
+                            <ul class="menu-ul">
+                                <li class="menu-list">
+                                    <div class="menu-list-left">
+                                        <span class="menu-number">28</span>はちみつフレンチトースト★<br>
+                                        <p>
+                                            Honey French toast
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="menu-list-left">
+                                        <span class="menu-number">29</span>ベイクドチーズケーキ★<br>
+                                        <p>
+                                            Baked cheese cake
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        450
+                                    </div>
+                                </li>
+                                <li class="menu-list" style="text-align: left;">
+                                    <div class="menu-list-left">
+                                        <span class="menu-number">30</span>クラシックショコラ★<br>
+                                        <p>
+                                            Classic Chocolate
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        450
+                                    </div>
+                                </li>
+                                <li class="menu-list" style="text-align: left;">
+                                    <div class="menu-list-left">
+                                        <span class="menu-number">31</span>チョコバナナサンデー<br>
+                                        <p>
+                                            Banana chocolate sundae
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list" style="text-align: left;">
+                                    <div class="menu-list-left">
+                                        <span class="menu-number">32</span>ベリーベリーサンデー<br>
+                                        <p>
+                                            Strawberry & Cranberry sundae
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list" style="text-align: left;">
+                                    <div class="menu-list-left">
+                                        <span class="menu-number">33</span>アフォガード<br>
+                                        <p>
+                                            Affogato
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        450
+                                    </div>
+                                </li>
+                                <li class="menu-list" style="text-align: left;">
+                                    <div class="menu-list-left">
+                                        <span class="menu-number">34</span>紅茶のキャラメルプリン<br>
+                                        <p>
+                                            Cream Caramel Pudding
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        450
+                                    </div>
+                                </li>
+                                <li class="menu-list" style="text-align: left;">
+                                    <div class="menu-list-left">
+                                        <span class="menu-number">35</span>バニラアイスクリーム<br>
+                                        <p>
+                                            Vanilla ice cream
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        900
+                                    </div>
+                                </li>
+                                <div class="menu-option" style="font-size: 11px;">
+                                    ※★印のあるデザートは、+100でバニラアイスをトッピング
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--アペタイザー-->
+                <div class="row menu-flex">
+                    <div class="col-md-5 col-xs-12">
+                        <img class="cooking-logo" src="mob/appetizer-logo.png" alt="アペタイザーのロゴ">
+                        <div class="menu-list-box">
+                            <ul class="menu-ul">
+                                <li class="menu-list">
+                                    <div class="menu-list-left">
+                                        <span class="menu-number">21</span>INAZUMAサラダ（具沢山シーザーサラダ）<br>
+                                        <p>
+                                            Caesar salad
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        800
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="menu-list-left">
+                                        <span class="menu-number">22</span> シーフードとアボカドのサラダ オーロラソース和え<br>
+                                        <p>
+                                            Seafood & Avocado salad
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        500
+                                    </div>
+                                </li>
+                                <li class="menu-list" style="text-align: left;">
+                                    <div class="menu-list-left">
+                                        <span class="menu-number">23</span>鶏の唐揚げ<br>
+                                        <p>
+                                            Fried Chicken
+                                        </p> 
+                                    </div>
+                                    <div class="menu-list-right">
+                                        450
+                                    </div>
+                                </li>
+                                <li class="menu-list" style="text-align: left;">
+                                    <div class="menu-list-left">
+                                        <span class="menu-number">24</span>揚げたてトルティーヤチップとサルサソース<br>
+                                        <p>
+                                            Tortilla chips with salsa sauce toast
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        450
+                                    </div>
+                                </li>
+                                <li class="menu-list" style="text-align: left;">
+                                    <div class="menu-list-left">
+                                        <span class="menu-number">25</span>ミックスピザ<br>
+                                        <p>
+                                            Mixed Pizza
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        800
+                                    </div>
+                                </li>
+                                <li class="menu-list" style="text-align: left;">
+                                    <div class="menu-list-left">
+                                        <span class="menu-number">26</span>ソーセージ盛り合わせ（5本入り）<br>
+                                        <p>
+                                            Assorted Sausage
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        700
+                                    </div>
+                                </li>
+                                <li class="menu-list" style="text-align: left;">
+                                    <div class="menu-list-left">
+                                        <span class="menu-number">27</span>チーズオムレツ<br>
+                                        <p>
+                                            Cheese Omelette
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        400
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                <!--デザートセット-->
+                    <div class="col-md-5 col-xs-12">
+                        <img class="cooking-logo" src="mob/dessertset-logo.png" alt="デザートのロゴ">
+                        <div class="menu-list-box">
+                            <div class="menu-option" style="padding: 10px; font-size: 11px;">
+                                OPENから18時の間にドリンクとデザートをご注文されるとデザートが150円引きになります！（バニラアイスは対象外です）
+                            </div>
+                            <img src="mob/dessertset.png" style="width:334.5px; height:320px;" alt="デザートセット">
+                        </div>
+                    </div>
+                    
+                    <!--お問い合わせ-->
+                    <div class="col-md-12" style="margin-top:80px; ">
+                        <a href="">
+                            <img  class="contact-icon" src="mob/btn-tel.png" alt="電話">
+                        </a>
+                    </div>
+                    <div class="col-md-12" style="margin-top: 22px; margin-bottom: 80px;">
+                        <a href="">
+                            <img  class="contact-icon"  src="mob/btn-uber.png" alt="ウーバーイーツ">
+                        </a>
+                    </div>
+                </div>
+                <!--ドリンク-->
+                <!--coffee etc-->
+                <div class="row menu-flex">
+                    <div class="col-md-12 col-xs-12">
+                        <img style="height: 35px;"  src="mob/drink-logo.png" alt="ドリンクのロゴ">
+                    </div>
+                    <div class="col-md-5 col-xs-12">
+                        <div class="drink-box">
+                        <img class="drink-logo" src="mob/coffeeetc-logo.png" alt="ドリンク">
+                        </div>
+                            <ul class="menu-ul">
+                                <div class="drink-option">
+                                    ※+100でアイスクリーム or 生クリームをトッピング
+                                </div>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        INAZUMA ブレンド<br>
+                                        <p class="drink-list">
+                                            INAZUMA Blend
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        380
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        アイスコーヒー<br>
+                                        <p class="drink-list">
+                                            Ice Coffee
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        400
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        アメリカーノ（アメリカン）<br>
+                                        <p class="drink-list">
+                                            Americano
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        380
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        エスプレッソ<br>
+                                        <p class="drink-list">
+                                            Espresso
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        280
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        エスプレッソ ダブル<br>
+                                        <p class="drink-list">
+                                            Double Espresso
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        380
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        カプチーノ（HOT / ICE）<br>
+                                        <p class="drink-list">
+                                            Cappuccino
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        450
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        カフェオレ（HOT / ICE）<br>
+                                        <p class="drink-list">
+                                            Cafe au lait
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        480
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        エスプレッソ マキアート<br>
+                                        <p class="drink-list">
+                                            Espresso macchiato
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        480
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        カフェモカ（HOT / ICE）<br>
+                                        <p class="drink-list">
+                                            Cafe mocha
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        520
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ハニーシナモンラテ<br>
+                                        <p class="drink-list">
+                                            Honey cinnamon latte
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        520
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        キャラメルマキアート（HOT / ICE）<br>
+                                        <p class="drink-list">
+                                            Caramel Macchiato
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        520
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        チョコクッキーマキアート（HOT / ICE）<br>
+                                        <p class="drink-list">
+                                            Chocolate cookie macchiato
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        520
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        抹茶ラテ（HOT / ICE）<br>
+                                        <p class="drink-list">
+                                            Matcha latte
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        520
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ココア（HOT / ICE）<br>
+                                        <p class="drink-list">
+                                            Cocoa
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        520
+                                    </div>
+                                </li>
+                            </ul>
+                <!--coffee coreto-->
+                        <div class="drink-box">
+                            <img class="alcohol-logo" src="mob/cafecoretto-logo.png" alt="ドリンク">
+                        </div>
+                            <ul class="menu-ul">
+                                <div class="drink-option">
+                                    ※+100でアイスクリーム or 生クリームをトッピング
+                                </div>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        カプチーノ & アマレット<br>
+                                        <p class="drink-list">
+                                            Cappuccino & Amaretto
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        520
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        カプチーノ & ベイリーズ<br>
+                                        <p class="drink-list">
+                                            Cappuccino & Baileys
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        520
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        カプチーノ & カルーア<br>
+                                        <p class="drink-list">
+                                            Cappuccino & Kahlua
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        520
+                                    </div>
+                                </li>
+                            </ul>
+                <!--tea-->
+                        <div class="drink-box">
+                            <img class="tea-logo" src="mob/tea-logo.png" alt="ドリンク">
+                        </div>
+                            <ul class="menu-ul">
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        アイスティー<br>
+                                        <p class="drink-list">
+                                            Ice tea
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        400
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ダージリンティー<br>
+                                        <p class="drink-list">
+                                            Darjeeling tea
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        480
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        アールグレイティー<br>
+                                        <p class="drink-list">
+                                            Earl Gray tea
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        480
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ローズヒップ・ピーチティー<br>
+                                        <p class="drink-list">
+                                            Rosehip peach tea
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        480
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ハーブティー<br>
+                                        <p class="drink-list">
+                                            Herb tea
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        480
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ジャズミンティー<br>
+                                        <p class="drink-list">
+                                            Jasmine tea
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        480
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        生姜ほうじ玄米茶<br>
+                                        <p class="drink-list">
+                                            Ginger houji genmai cha
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        480
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ロイヤルミルクティー<br>
+                                        <p class="drink-list">
+                                            Royal milk tea
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        400
+                                    </div>
+                                </li>
+                                <div class="drink-option">
+                                    ※ハーブティーとローズヒップ・ピーチティーはノンカフェインです。
+                                </div>
+                            </ul>
+                    </div>
+                    <!--juice etc-->
+                    <div class="col-md-5 col-xs-12">
+                        <div class="drink-box">
+                        <img class="juice-logo" src="mob/juiceetc-logo.png" alt="ドリンク">
+                        </div>
+                            <ul class="menu-ul">
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        オレンジジュース<br>
+                                        <p class="drink-list">
+                                            Orange juice
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        450
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        トマトジュース<br>
+                                        <p class="drink-list">
+                                            Tomato juice
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        450
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        グレープフルーツジュース<br>
+                                        <p class="drink-list">
+                                            Grapefruit juice
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        450
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        アップルジュース<br>
+                                        <p class="drink-list">
+                                            Apple juice
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        450
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        コカ・コーラ<br>
+                                        <p class="drink-list">
+                                            Coca Cola
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        450
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ジンジャーエール<br>
+                                        <p class="drink-list">
+                                            Ginger ale
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        450
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        マンゴージュース<br>
+                                        <p class="drink-list">
+                                            Mango juice
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        450
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        パイナップルジュース<br>
+                                        <p class="drink-list">
+                                            Pineapple juice
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        450
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ペリエ<br>
+                                        <p class="drink-list">
+                                            Perrier
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        400
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ウーロン茶<br>
+                                        <p class="drink-list">
+                                            Oolong Tea
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        400
+                                    </div>
+                                </li>
+                            </ul>
+                <!--nonal-->
+                        <div class="drink-box">
+                            <img class="nonal-logo" src="mob/nonal-logo.png" alt="ドリンク">
+                        </div>
+                            <ul class="menu-ul">
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        フルーツアイスティー<br>
+                                        <p class="drink-list">
+                                            Fruit iced tea
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        グリーンアップルティー・スカッシュ<br>
+                                        <p class="drink-list">
+                                            Green apple tea squash
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        マンゴーレモネード<br>
+                                        <p class="drink-list">
+                                            Mango lemonade
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ベリーベリーソーダ<br>
+                                        <p class="drink-list">
+                                            Berry berry soda
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        バナナミルク<br>
+                                        <p class="drink-list">
+                                            Banana milk
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        イチゴミルク<br>
+                                        <p class="drink-list">
+                                            Strawberry milk
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        キウイオレンジーナ<br>
+                                        <p class="drink-list">
+                                            Kiwi orangina
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        アップルジンジャー<br>
+                                        <p class="drink-list">
+                                            Apple ginger
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                            </ul>
+                <!--tea-img-->
+                        <div class="drink-box">
+                            <img class="tea-img" src="mob/tea-img.png" alt="ドリンク">
+                        </div>
+                    </div>
+                <!--beer-->
+                <div class="row menu-flex">
+                    <div class="col-md-12 col-xs-12">
+                        <img style="height:34px;"  src="mob/alcohol-text.png" alt="ドリンクのロゴ">
+                    </div>
+                    <div class="col-md-5 col-xs-12">
+                        <div class="drink-box">
+                        <img class="beer-logo" src="mob/beer-logo.png" alt="ドリンク">
+                        </div>
+                            <ul class="menu-ul">
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ドラフト（KIRIN 一番搾り）<br>
+                                        <p class="drink-list">
+                                            Draft beer (KIRIN Ichiban-shibori)
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ハイネケン<br>
+                                        <p class="drink-list">
+                                            Heineken
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        650
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ハートランド<br>
+                                        <p class="drink-list">
+                                            Heartland
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        650
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ギネスドラフト<br>
+                                        <p class="drink-list">
+                                            Guinness draft
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        700
+                                    </div>
+                                </li>
+                            </ul>
+                <!--wine-->
+                        <div class="drink-box">
+                            <img class="text_wine" src="mob/text_wine.png" alt="ドリンク">
+                        </div>
+                            <ul class="menu-ul">
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        グラスワイン（赤/白）<br>
+                                        <p class="drink-list">
+                                            Glass wine (Red/white)
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        デカンタ 250ml（赤/白）<br>
+                                        <p class="drink-list">
+                                            Decanter 250ml (Red/white)Cappuccino & Baileys
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        800
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        デカンタ 500ml（赤/白）<br>
+                                        <p class="drink-list">
+                                            Decanter 500ml (Red/white)
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        1300
+                                    </div>
+                                </li>
+                            </ul>
+                <!--bottlewine-->
+                        <div class="drink-box">
+                            <img class="drink-logo"  src="mob/text_bottlewine.png" alt="ドリンク">
+                        </div>
+                            <ul class="menu-ul">
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        銘柄はお問い合わせください<br>
+                                        <p class="drink-list">
+                                            Please ask us for the brand
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        2000
+                                    </div>
+                                </li>
+                            </ul>
+                <!--other-->
+                        <div class="drink-box">
+                            <img class="drink-logo"  src="mob/other-logo.png" alt="ドリンク">
+                        </div>
+                            <ul class="menu-ul">
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        梅酒<br>
+                                        <p class="drink-list">
+                                            Plum wine
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        焼酎 / 魔界への誘い<br>
+                                        <p class="drink-list">
+                                            Shochu / Makai he no Izanai
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                            </ul>
+                    </div>
+                    <!--cocktail-->
+                    <div class="col-md-5 col-xs-12">
+                        <div class="drink-box">
+                        <img class="drink-logo" src="mob/text_cocktail.png" alt="ドリンク">
+                        </div>
+                            <ul class="menu-ul">
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        レモンサワー<br>
+                                        <p class="drink-list">
+                                            Lemon sour
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        グレープフルーツサワー<br>
+                                        <p class="drink-list">
+                                            Grapefruit sour
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ウーロンハイ<br>
+                                        <p class="drink-list">
+                                            Woolong High
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ジントニック<br>
+                                        <p class="drink-list">
+                                            Gin and tonic
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        キューバリバー<br>
+                                        <p class="drink-list">
+                                            Cuba River
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        モスコミュール<br>
+                                        <p class="drink-list">
+                                            Moscow Mule
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ブラッディーメアリー<br>
+                                        <p class="drink-list">
+                                            Bloody Mary
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        スクリュードライバー<br>
+                                        <p class="drink-list">
+                                            screwdriver
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        スプモーニ<br>
+                                        <p class="drink-list">
+                                            Spumoni
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        キール<br>
+                                        <p class="drink-list">
+                                            keel
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ジンバック<br>
+                                        <p class="drink-list">
+                                            Gin Buck
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        スプリッツァー<br>
+                                        <p class="drink-list">
+                                            Spritzer
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        シャンディガフ<br>
+                                        <p class="drink-list">
+                                            Shandy Gaff
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ビアスプリッツァー<br>
+                                        <p class="drink-list">
+                                            Beer Spritzer
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        レッドアイ<br>
+                                        <p class="drink-list">
+                                            Red eye
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                                <li class="menu-list">
+                                    <div class="drink-list-left">
+                                        ハイボール<br>
+                                        <p class="drink-list">
+                                            Highball
+                                        </p>
+                                    </div>
+                                    <div class="menu-list-right">
+                                        550
+                                    </div>
+                                </li>
+                            </ul>
+                    </div>
+                    
+                    <!--お問い合わせ-->
+                    <div class="col-md-12" style="margin-top:80px; ">
+                        <a href="">
+                            <img   class="contact-icon" src="mob/btn-tel.png" alt="電話">
+                        </a>
+                    </div>
+                    <div class="col-md-12" style="margin-top: 22px; margin-bottom: 80px;">
+                        <a href="">
+                            <img   class="contact-icon" src="mob/btn-uber.png" alt="ウーバーイーツ">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<footer class="footer">
+    ©2020 INAZUMA Cafe All Rights Reserved
+</footer>
+</html>
